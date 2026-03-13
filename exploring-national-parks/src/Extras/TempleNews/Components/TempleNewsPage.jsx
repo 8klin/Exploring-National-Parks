@@ -4,16 +4,14 @@ import "./TempleNewsPage.css";
 const TempleNewsPage = () => {
   const [posts, setPosts] = useState([]);
 
-useEffect(() => {
-  fetch(
-    "https://corsproxy.io/?https://www.reddit.com/r/Temple/new.json?limit=5"
-  )
-    .then((res) => res.json())
-    .then((data) => {
-      setPosts(data?.data?.children || []);
-    })
-    .catch((err) => console.error("Error fetching Temple news:", err));
-}, []);
+  useEffect(() => {
+    fetch("https://api.rss2json.com/v1/api.json?rss_url=https://www.reddit.com/r/Temple/.rss")
+      .then((res) => res.json())
+      .then((data) => {
+        setPosts(data.items.slice(0, 5)); // newest 5 posts
+      })
+      .catch((err) => console.error("Error fetching Temple news:", err));
+  }, []);
 
   return (
     <div className="temple-news-page">
@@ -23,12 +21,12 @@ useEffect(() => {
       {posts.length === 0 ? (
         <p>Loading latest news...</p>
       ) : (
-        posts.map((post) => (
-          <div className="news-card" key={post.data.id}>
-            <h3>{post.data.title}</h3>
+        posts.map((post, index) => (
+          <div className="news-card" key={index}>
+            <h3>{post.title}</h3>
 
             <a
-              href={post.data.url}
+              href={post.link}
               target="_blank"
               rel="noopener noreferrer"
             >
