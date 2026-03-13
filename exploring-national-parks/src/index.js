@@ -38,7 +38,6 @@ root.render(
                 <Route path="/ParkInfo" element={<ParkInfo />} />
                 <Route path="/ParkPlan" element={<ParkPlan />} />
                 <Route path="/TempleLocationsPage" element={<TempleLocationsPage />} />
-                <Route path="/TempleNewsPage" element={<TempleNewsPage />} />
                 <Route path="/ParkChecklist" element={<ParkChecklist />} />
                 <Route path="/TempleNewsPage" element={<TempleNewsPage />} />
             </Routes>

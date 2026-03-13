@@ -46,13 +46,10 @@ const Navbar = () => {
                         <li>
                             <NavLink to="/TempleLocationsPage">Temple Locations</NavLink>
                         </li>
-                        <li> 
-                            <NavLink to="/TempleNewsPage">Temple News</NavLink>"
+                       <li>
+                            <NavLink to="/TempleNewsPage">Temple News</NavLink>
                         </li>
                     </ul>
-                </li>
-                <li>
-                    <NavLink to="/TempleNewsPage">Temple News</NavLink>
                 </li>
             </ul>
         </nav>
