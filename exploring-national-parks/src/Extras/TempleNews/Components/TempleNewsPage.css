@@ -1,0 +1,32 @@
+.temple-news-page {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.temple-news-page h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.news-card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  background-color: #fafafa;
+}
+
+.news-card h3 {
+  margin: 0 0 8px 0;
+}
+
+.news-card a {
+  color: #3a4937;
+  text-decoration: none;
+}
+
+.news-card a:hover {
+  text-decoration: underline;
+}
