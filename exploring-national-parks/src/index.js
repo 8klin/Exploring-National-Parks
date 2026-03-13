@@ -20,7 +20,6 @@ import ParkInfo from './ParkInfo.js';
 import HomePage from './HomePage.js';
 import ParkPlan from './ParkPlan.js';
 import TempleLocationsPage from './Extras/TempleLocations/Components/locationsPage.jsx';
-import TempleNewsPage from './Extras/TempleNews/Components/TempleNewsPage.jsx';
 import ParkChecklist from "./Extras/SuppliesChecklist/Functionality/ParkChecklist.js";
 import TempleNewsPage from './Extras/TempleNews/Components/TempleNewsPage.jsx';
 import Navbar from './GlobalComponents/Navbar.jsx';
