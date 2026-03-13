@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
-import './TempleNewsPage.css';
+import "./TempleNewsPage.css";
 
-const TempleAlertsPage = () => {
+const TempleNewsPage = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    fetch("https://www.reddit.com/r/Temple/new.json?limit=5")
+    fetch("https://api.rss2json.com/v1/api.json?rss_url=https://www.reddit.com/r/Temple/.rss")
       .then((res) => res.json())
       .then((data) => {
-        const latestPosts = data.data.children.slice(0, 5);
-        setPosts(latestPosts);
+        setPosts(data.items.slice(0, 5)); // newest 5 posts
       })
       .catch((err) => console.error("Error fetching Temple news:", err));
   }, []);
@@ -17,24 +16,27 @@ const TempleAlertsPage = () => {
   return (
     <div className="temple-news-page">
       <h1>Temple News & Alerts</h1>
-      <p>Latest posts from the Temple University subreddit.</p>
+      <p>Latest posts from the Temple subreddit.</p>
 
-      {posts.map((post) => (
-        <div className="news-card" key={post.data.id}>
-          <h3>{post.data.title}</h3>
+      {posts.length === 0 ? (
+        <p>Loading latest news...</p>
+      ) : (
+        posts.map((post, index) => (
+          <div className="news-card" key={index}>
+            <h3>{post.title}</h3>
 
-          <a
-            href={post.data.url}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read more
-          </a>
-        </div>
-      ))}
-
+            <a
+              href={post.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read more
+            </a>
+          </div>
+        ))
+      )}
     </div>
   );
 };
 
-export default TempleAlertsPage;
+export default TempleNewsPage;
