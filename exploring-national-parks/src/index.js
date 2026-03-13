@@ -22,7 +22,6 @@ import ParkPlan from './ParkPlan.js';
 import TempleLocationsPage from './Extras/TempleLocations/Components/locationsPage.jsx';
 import TempleNewsPage from './Extras/TempleNews/Components/TempleNewsPage.jsx';
 import ParkChecklist from "./Extras/SuppliesChecklist/Functionality/ParkChecklist.js";
-import TempleNewsPage from './Extras/TempleNews/Components/TempleNewsPage.jsx';
 import Navbar from './GlobalComponents/Navbar.jsx';
 import {BrowserRouter as Router, Routes,Route} from "react-router-dom";
 import Footer from './GlobalComponents/Footer.jsx';
