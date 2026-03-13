@@ -20,7 +20,7 @@ import ParkInfo from './ParkInfo.js';
 import HomePage from './HomePage.js';
 import ParkPlan from './ParkPlan.js';
 import TempleLocationsPage from './Extras/TempleLocations/Components/locationsPage.jsx';
-import ParkChecklist from "./Extras/Supplies Checklist/Functionality/ParkChecklist";
+import ParkChecklist from "./Extras/SuppliesChecklist/Functionality/ParkChecklist.js";
 import Navbar from './GlobalComponents/Navbar.jsx';
 import {BrowserRouter as Router, Routes,Route} from "react-router-dom";
 import Footer from './GlobalComponents/Footer.jsx';

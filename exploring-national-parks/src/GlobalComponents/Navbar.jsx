@@ -13,41 +13,44 @@ const Navbar = () => {
     return (
         <nav className="nav-bar">
             <ul>
-                <li className = "header">
+                <li className="header">
                     <NavLink to="/">Exploring National Parks</NavLink>
                 </li>
-                <li className = "logo">
-                    <img src = {tree} alt = "tree"/>
+
+                <li className="logo">
+                    <img src={tree} alt="Tree logo" />
                 </li>
+
                 <li>
                     <NavLink to="/">Home</NavLink>
                 </li>
+
                 <li>
                     <NavLink to="/ParkSearch">Park Search</NavLink>
                 </li>
+
                 <li>
-                    <NavLink to="/ParkInfo" reloadDocument>Park Info</NavLink>
+                    <NavLink to="/ParkInfo">Park Info</NavLink>
                 </li>
+
                 <li>
                     <NavLink to="/ParkPlan">Park Planner</NavLink>
                 </li>
 
                 <li className="dropdown">
-                    <span>Extras ▾</span>
-                        <ul className="dropdown-menu">
-                            <li>
-                                <NavLink to="/checklist">Park Checklist</NavLink>
-                            </li>
-                            
-                            <li>
-                                <NavLink to="/TempleLocationsPage">Temple Locations</NavLink>
-                            </li>
-                        </ul>
-
+                    <span className="dropdown-title">Extras</span>
+                    <ul className="dropdown-menu">
+                        <li>
+                            <NavLink to="/ParkChecklist">Park Checklist</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/TempleLocationsPage">Temple Locations</NavLink>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </nav>
-    )
+    );
 }
 
 export default Navbar
