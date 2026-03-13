@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
-import "../Style/parkChecklist.css";
+import "./parkChecklist.css";
 
 const starterItems = [
   { id: 1, name: "Water bottle", category: "Essentials", checked: true },

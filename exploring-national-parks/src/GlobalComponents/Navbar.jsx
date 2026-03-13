@@ -31,8 +31,19 @@ const Navbar = () => {
                 <li>
                     <NavLink to="/ParkPlan">Park Planner</NavLink>
                 </li>
-                <li>
-                    <NavLink to="/TempleLocationsPage">Temple Locations</NavLink>
+
+                <li className="dropdown">
+                    <span>Extras ▾</span>
+                        <ul className="dropdown-menu">
+                            <li>
+                                <NavLink to="/checklist">Park Checklist</NavLink>
+                            </li>
+                            
+                            <li>
+                                <NavLink to="/TempleLocationsPage">Temple Locations</NavLink>
+                            </li>
+                        </ul>
+
                 </li>
             </ul>
         </nav>
