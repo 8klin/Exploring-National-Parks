@@ -51,6 +51,9 @@ const Navbar = () => {
                         </li>
                     </ul>
                 </li>
+                <li>
+                    <NavLink to="/TempleNewsPage">Temple News</NavLink>
+                </li>
             </ul>
         </nav>
     );
